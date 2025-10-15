@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/escena 1.unity
+    guid: 7e4e3c0f2272647849f94e453235b2a9
+  - enabled: 1
+    path: Assets/Scenes/escena 2.unity
+    guid: f7b7d231c75e940a59aab13cea00fb44
+  - enabled: 1
+    path: Assets/Scenes/ecsena 3.unity
+    guid: b40541c3885a642ce99a336eb81943e4
+  - enabled: 0
     path: Assets/Scenes/prueba_alfa.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   m_configObjects:
