@@ -281,24 +281,6 @@ RectTransform:
   m_AnchoredPosition: {x: 231.15044, y: 0}
   m_SizeDelta: {x: -462.3008, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &292277773 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2543525012576860563, guid: 9b30a18436aca4d69858d566603b25ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 5114728884802760473}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &292277775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292277773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5380480cc02e4225ab2b3384da66582, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &334632074
 GameObject:
   m_ObjectHideFlags: 0
@@ -11102,14 +11084,15 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1022495679}
+    - target: {fileID: 8152236316861504578, guid: 9b30a18436aca4d69858d566603b25ec,
+        type: 3}
+      propertyPath: Sensivity
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2543525012576860563, guid: 9b30a18436aca4d69858d566603b25ec,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 292277775}
     - targetCorrespondingSourceObject: {fileID: 1759001051399680733, guid: 9b30a18436aca4d69858d566603b25ec,
         type: 3}
       insertIndex: 4
