@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4624140002249218113}
   - component: {fileID: 6122636658419601215}
   - component: {fileID: 2925583014448576514}
-  - component: {fileID: 4237782326111198083}
+  - component: {fileID: 9018772264348955206}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _FixedTouchField: {fileID: 0}
   _CameraLook: {fileID: 8152236316861504578}
---- !u!114 &4237782326111198083
+--- !u!114 &9018772264348955206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

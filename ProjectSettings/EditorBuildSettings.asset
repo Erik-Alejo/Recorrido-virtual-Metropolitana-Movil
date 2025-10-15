@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/escena 2.unity
     guid: f7b7d231c75e940a59aab13cea00fb44
   - enabled: 1
-    path: Assets/Scenes/ecsena 3.unity
+    path: Assets/Scenes/escena 3.unity
     guid: b40541c3885a642ce99a336eb81943e4
   - enabled: 0
     path: Assets/Scenes/prueba_alfa.unity
