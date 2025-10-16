@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: USFX
-  productName: Alfa Catedral Metrop 2.1.1
+  productName: Beta Catedral Metrop 0.1.2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -141,11 +141,8 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.0.2
-  preloadedAssets:
-  - {fileID: -1737351027502763075, guid: c5a05aa89485d44d1a9319ee6b934531, type: 2}
-  - {fileID: 11400000, guid: fff67a1b9d1880f4e833abfdffd66812, type: 2}
-  - {fileID: 11400000, guid: 6527f0ba4c8f4b4439da68cb370bdd74, type: 2}
+  bundleVersion: 0.1.2.0
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
