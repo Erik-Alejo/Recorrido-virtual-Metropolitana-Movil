@@ -1,23 +1,19 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneTransitionManager : MonoBehaviour
 {
     public static SceneTransitionManager Instance;
-    private string targetSpawnName;
+    public Image fadeImage; // imagen del Canvas para el fundido (negro)
 
-    private void Awake()
+    void Awake()
     {
-        // Asegurarse de que solo exista una instancia
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-
-            // Se ejecuta cada vez que una escena nueva se carga
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            DontDestroyOnLoad(gameObject); // mantiene el fade entre escenas
         }
         else
         {
@@ -25,35 +21,50 @@ public class SceneTransitionManager : MonoBehaviour
         }
     }
 
-    // Método que se llama desde ScenePortal
-    public void LoadScene(string sceneName, string spawnPointName)
+    // M�todo simple para cargar escena con fundido
+    public void LoadScene(string sceneName)
     {
-        targetSpawnName = spawnPointName;
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(FadeAndLoadScene(sceneName));
     }
 
-    // Se ejecuta automáticamente después de cargar una nueva escena
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private IEnumerator FadeAndLoadScene(string sceneName)
     {
-        if (string.IsNullOrEmpty(targetSpawnName))
-            return;
+        yield return StartCoroutine(FadeOut());
+        SceneManager.LoadScene(sceneName);
+        yield return StartCoroutine(FadeIn());
+    }
 
-        // Buscar el punto de aparición y el jugador
-        GameObject spawnPoint = GameObject.Find(targetSpawnName);
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+    private IEnumerator FadeOut()
+    {
+        if (fadeImage == null)
+            yield break;
 
-        // Si ambos existen, reposicionar al jugador
-        if (spawnPoint != null && player != null)
+        Color color = fadeImage.color;
+        for (float t = 0; t < 1f; t += Time.deltaTime)
         {
-            player.transform.position = spawnPoint.transform.position;
-            player.transform.rotation = spawnPoint.transform.rotation;
-        }
-        else
-        {
-            Debug.LogWarning("Spawn point o Player no encontrado en la escena: " + scene.name);
+            color.a = t;
+            fadeImage.color = color;
+            yield return null;
         }
 
-        // Limpiar para evitar errores en futuras cargas
-        targetSpawnName = null;
+        color.a = 1f;
+        fadeImage.color = color;
+    }
+
+    private IEnumerator FadeIn()
+    {
+        if (fadeImage == null)
+            yield break;
+
+        Color color = fadeImage.color;
+        for (float t = 1f; t > 0f; t -= Time.deltaTime)
+        {
+            color.a = t;
+            fadeImage.color = color;
+            yield return null;
+        }
+
+        color.a = 0f;
+        fadeImage.color = color;
     }
 }

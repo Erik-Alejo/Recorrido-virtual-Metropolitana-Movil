@@ -1,19 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScenePortal : MonoBehaviour
 {
-    //[Header("Scene transition settings")]
-    public string targetSceneName;
-    public string targetSpawnPointName;
+    public string sceneToLoad; // nombre exacto de la escena a cargar
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneTransitionManager.Instance.LoadScene(targetSceneName, targetSpawnPointName);
+            SceneManager.LoadScene(sceneToLoad); // carga la escena directamente
         }
-
     }
 }
