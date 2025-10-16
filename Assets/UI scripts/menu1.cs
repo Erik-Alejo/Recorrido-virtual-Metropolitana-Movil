@@ -49,8 +49,14 @@ public class menu1 : MonoBehaviour
                 PanelSalirEscritorio.SetActive(false);
                 break;
             case 5:
-
+                PanelOpciones.SetActive(true);
+                Time.timeScale = 0f; // Congela todo el tiempo del juego
+                //if (player != null)
+                //    player.GetComponent<CharacterController>().enabled = false; // Desactiva movimiento
+                break;
+            case 6:
                 PanelOpciones.SetActive(false);
+                Time.timeScale = 1f; // Congela todo el tiempo del juego
                 break;
             default:
                 Debug.Log("Índice no válido");

@@ -27,7 +27,11 @@ EditorBuildSettings:
     path: Assets/Scenes/prueba_alfa.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
+      guid: 6527f0ba4c8f4b4439da68cb370bdd74, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c5a05aa89485d44d1a9319ee6b934531,
       type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: fff67a1b9d1880f4e833abfdffd66812, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: d57f657331fc54d1dbcf61ccc8666a25, type: 2}

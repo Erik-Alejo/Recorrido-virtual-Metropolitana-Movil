@@ -41,6 +41,15 @@ public class PauseManager : MonoBehaviour
             player.GetComponent<CharacterController>().enabled = true; // Reactiva movimiento
     }
 
+    public void Regresar()
+    {
+
+        SceneManager.LoadScene("PrincipalMenu"); // Usa el nombre real de tu escena principal
+        Resume(); // Asegúrate de que el juego esté reanudado
+        
+       
+    }
+
     public void LoadMainMenu()
     {
         Time.timeScale = 1f; // Restaura el tiempo antes de cambiar de escena
