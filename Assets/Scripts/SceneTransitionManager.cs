@@ -1,20 +1,19 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneTransitionManager : MonoBehaviour
 {
     public static SceneTransitionManager Instance;
-    private string targetSpawnName;
+    public Image fadeImage; // imagen del Canvas para el fundido (negro)
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            DontDestroyOnLoad(gameObject); // mantiene el fade entre escenas
         }
         else
         {
@@ -22,26 +21,50 @@ public class SceneTransitionManager : MonoBehaviour
         }
     }
 
-    public void LoadScene(string sceneName, string spawnPointName)
+    // Método simple para cargar escena con fundido
+    public void LoadScene(string sceneName)
     {
-        targetSpawnName = spawnPointName;
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(FadeAndLoadScene(sceneName));
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private IEnumerator FadeAndLoadScene(string sceneName)
     {
-        if (string.IsNullOrEmpty(targetSpawnName)) return;
+        yield return StartCoroutine(FadeOut());
+        SceneManager.LoadScene(sceneName);
+        yield return StartCoroutine(FadeIn());
+    }
 
-        GameObject spawnPoint = GameObject.Find(targetSpawnName);
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+    private IEnumerator FadeOut()
+    {
+        if (fadeImage == null)
+            yield break;
 
-        if (spawnPoint != null && player != null)
+        Color color = fadeImage.color;
+        for (float t = 0; t < 1f; t += Time.deltaTime)
         {
-            player.transform.position = spawnPoint.transform.position;
-            player.transform.rotation = spawnPoint.transform.rotation;
+            color.a = t;
+            fadeImage.color = color;
+            yield return null;
         }
 
-        targetSpawnName = null;
+        color.a = 1f;
+        fadeImage.color = color;
     }
 
+    private IEnumerator FadeIn()
+    {
+        if (fadeImage == null)
+            yield break;
+
+        Color color = fadeImage.color;
+        for (float t = 1f; t > 0f; t -= Time.deltaTime)
+        {
+            color.a = t;
+            fadeImage.color = color;
+            yield return null;
+        }
+
+        color.a = 0f;
+        fadeImage.color = color;
+    }
 }
