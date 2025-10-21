@@ -22,8 +22,8 @@ public class ScenePortal : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("No FadeManager found in the scene!");
-                // Por seguridad, carga la escena sin fade
+                Debug.LogWarning("Chale no da :(");
+                // carga la escena sin faded
                 StartCoroutine(LoadWithoutFade());
             }
         }
@@ -31,7 +31,7 @@ public class ScenePortal : MonoBehaviour
 
     private IEnumerator LoadWithoutFade()
     {
-        yield return new WaitForSeconds(2f); // Espera 1 segundo antes de cambiar
+        yield return new WaitForSeconds(2f); // Espera un time a.., segundo antes de cambiar
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
     }
 }
