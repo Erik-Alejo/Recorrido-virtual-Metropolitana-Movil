@@ -11,6 +11,8 @@ public class PlayerMove : MonoBehaviour
     private Vector3 velocity;      // almacena la velocidad vertical
     private bool isGrounded;       // verifica si está tocando el suelo
 
+    private bool estaCaminando = false;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -46,6 +48,8 @@ public class PlayerMove : MonoBehaviour
 
         // Aplicar el movimiento vertical (caída)
         controller.Move(velocity * Time.deltaTime);
+
+        
     }
 }
 
