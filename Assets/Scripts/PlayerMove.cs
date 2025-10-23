@@ -51,9 +51,13 @@ public class PlayerMove : MonoBehaviour
         {
             estaCaminando = true;
             Debug.Log("El jugador comenzó a moverse");
+            SoundEvents.PasosConcreto?.Invoke(); //Sonido by Chelo :D
+
         }
         else if (!movimientoActual && estaCaminando)
         {
+            
+            SoundEvents.DetenerPasosConcreto?.Invoke(); //Sonido by Chelo :D
             estaCaminando = false;
             Debug.Log("El jugador se detuvo");
         }

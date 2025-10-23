@@ -2378,6 +2378,99 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8219082830301355439}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4771802549854945685
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 840766851129757525, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: pasosConcreto.Path
+      value: event:/SFX_Gameplay/Pasos_Calle
+      objectReference: {fileID: 0}
+    - target: {fileID: 840766851129757525, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: pasosConcreto.Guid.Data1
+      value: 1232357513
+      objectReference: {fileID: 0}
+    - target: {fileID: 840766851129757525, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: pasosConcreto.Guid.Data2
+      value: 1237797604
+      objectReference: {fileID: 0}
+    - target: {fileID: 840766851129757525, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: pasosConcreto.Guid.Data3
+      value: 732441246
+      objectReference: {fileID: 0}
+    - target: {fileID: 840766851129757525, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: pasosConcreto.Guid.Data4
+      value: -567057027
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.2671356
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.953438
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 75.457924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400533103578533716, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993907657581060676, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundsManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 46af02eaf14e7f74eb0915e5e1b7c5a3, type: 3}
 --- !u!1001 &8219082830301355439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2516,3 +2609,4 @@ SceneRoots:
   - {fileID: 63923559}
   - {fileID: 698682492}
   - {fileID: 2001998}
+  - {fileID: 4771802549854945685}

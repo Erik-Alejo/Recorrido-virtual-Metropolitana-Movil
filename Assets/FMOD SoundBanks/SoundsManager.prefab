@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pasosConcreto:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1232357513
+      Data2: 1237797604
+      Data3: 732441246
+      Data4: -567057027
+    Path: event:/SFX_Gameplay/Pasos_Calle

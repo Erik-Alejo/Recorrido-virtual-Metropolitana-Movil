@@ -13,8 +13,8 @@ public class SFX_Gameplay : MonoBehaviour
 
     private void OnEnable()
     {
-        EventSoundsCentral.PasosConcreto += ReproducirPasosConcreto;
-        EventSoundsCentral.DetenerPasosConcreto += DetenerPasosConcreto;
+        SoundEvents.PasosConcreto += ReproducirPasosConcreto;
+        SoundEvents.DetenerPasosConcreto += DetenerPasosConcreto;
     }
 
     // Start is called before the first frame update
@@ -40,7 +40,7 @@ public class SFX_Gameplay : MonoBehaviour
     {
         if (!pasosConcreto.IsNull)
         {
-            instanciaPasosConcreto.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            instanciaPasosConcreto.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }
 }

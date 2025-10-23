@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD SoundBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638968100619189354
+  lastModified: 638968146846254021
   FileSizes: []
   Exists: 1
 --- !u!114 &-2280522727924905224
@@ -68,7 +68,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3177954145673164191}
   cacheVersion: 131849
-  cacheTime: 638968100619245013
+  cacheTime: 638968146846325128
   SerializableEventsDict:
   - key: event:/SFX_Gameplay/Pasos_Calle
     index: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   Path: Assets/FMOD SoundBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638968100619245013
+  lastModified: 638968146846325128
   FileSizes:
   - Name: 
     Value: 786

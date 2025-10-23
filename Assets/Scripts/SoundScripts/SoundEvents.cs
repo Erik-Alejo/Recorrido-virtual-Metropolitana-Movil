@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class EventSoundsCentral
+public static class SoundEvents
 {
     public static Action PasosConcreto;
     public static Action DetenerPasosConcreto;
